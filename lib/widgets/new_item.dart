@@ -41,7 +41,7 @@ class _NewItem extends State<NewItem> {
         ),
       );
 
-      final Map<String, dynamic> Dresponse = json.decode(response.body);
+      final Map<String, dynamic> dResponse = json.decode(response.body);
 
       if (!context.mounted) {
         return;
@@ -49,7 +49,7 @@ class _NewItem extends State<NewItem> {
 
       Navigator.of(context).pop(
         GroceryItem(
-          id: Dresponse['name'],
+          id: dResponse['name'],
           name: _enteredname,
           quantity: _enteredquantity.toDouble(),
           category: _selectedCategory,
